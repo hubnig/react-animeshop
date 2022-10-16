@@ -12,7 +12,7 @@ function App() {
           </div>
         </div>
         <ul className="d-flex">
-          <li className="mr-30">
+          <li className="mr-30 d-flex align-center">
             <img
               width={18}
               height={18}
@@ -21,7 +21,7 @@ function App() {
             />
             <span>1205 руб.</span>
           </li>
-          <li>
+          <li className="d-flex align-center">
             <svg //Делаем так если нужно будет изменить цвет svg
               width="20"
               height="20"
@@ -40,9 +40,18 @@ function App() {
         </ul>
       </header>
       <div className="content p-40">
-        <h1 className="mb-40">Все кроссовки</h1>
+        <div className="d-flex align-center justify-between mb-40">
+          <h1>Все кроссовки</h1>
+          <div className="search-block d-flex">
+            <img src="/img/search.svg" alt="search"/>
+            <input placeholder="Поиск..."/>
+          </div>
+        </div>
         <div className="d-flex justify-between">
           <div className="card">
+            <div className="favorite">
+            <img src="/img/heart-unliked.svg" alt="unliked"/>
+            </div>
             <img
               width={133}
               height={112}

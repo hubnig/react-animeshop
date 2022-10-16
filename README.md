@@ -74,3 +74,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Удалили всё не нужное
 Установили SASS
 установил набор классов от Арчакова аля таилвинд
+сверстали header and card 
