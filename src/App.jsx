@@ -1,9 +1,10 @@
 import "./App.scss";
+import Card from "./components/Card"
 
 function App() {
   return (
     <div className="wrapper clear">
-      <div className="overlay">
+      <div style={{display: 'none'}} className="overlay">
         <div className="drawer">
           <h2 className="d-flex justify-between align-center mb-30">Корзина <img className="removeBtn cu-p" src="img/del-point.svg" alt="del" /></h2>
           <div className="items">
@@ -98,27 +99,7 @@ function App() {
           </div>
         </div>
         <div className="d-flex justify-between">
-          <div className="card">
-            <div className="favorite">
-              <img src="/img/heart-unliked.svg" alt="unliked" />
-            </div>
-            <img
-              width={133}
-              height={112}
-              src="img/sneakers/1.jpg"
-              alt="cover"
-            />
-            <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-            <div className="d-flex justify-between">
-              <div className="d-flex flex-column">
-                <span>Цена:</span>
-                <b>12 999 руб.</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
+          <Card/>
           <div className="card">
             <img
               width={133}
