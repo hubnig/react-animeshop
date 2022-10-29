@@ -1,12 +1,12 @@
 import styles from './Drawer.module.scss'
 
-function Drawer() {
+function Drawer(props) {
   return (
-    <div style={{display:"none"}} className={styles.overlay}>
+    <div className={styles.overlay}>
       <div className={styles.drawer}>
         <h2 className="d-flex justify-between align-center mb-30">
-          Корзина{" "}
-          <img className="removeBtn cu-p" src="img/del-point.svg" alt="del" />
+          Корзина
+          <img onClick={props.onClose} className="removeBtn cu-p" src="img/del-point.svg" alt="del" />
         </h2>
         <div className={styles.items}>
           <div className={styles.cartItem}>
