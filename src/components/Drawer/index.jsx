@@ -1,13 +1,15 @@
+import styles from './Drawer.module.scss'
+
 function Drawer() {
   return (
-    <div style={{ display: "none" }} className="overlay">
-      <div className="drawer">
+    <div style={{display:"none"}} className={styles.overlay}>
+      <div className={styles.drawer}>
         <h2 className="d-flex justify-between align-center mb-30">
           Корзина{" "}
           <img className="removeBtn cu-p" src="img/del-point.svg" alt="del" />
         </h2>
-        <div className="items">
-          <div className="cartItem d-flex align-center mb-20">
+        <div className={styles.items}>
+          <div className={styles.cartItem}>
             <img
               className="mr-20"
               width={70}
@@ -19,9 +21,9 @@ function Drawer() {
               <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
               <b>12 999 руб.</b>
             </div>
-            <img className="removeBtn" src="img/del-point.svg" alt="del" />
+            <img className={styles.removeBtn} src="img/del-point.svg" alt="del" />
           </div>
-          <div className="cartItem d-flex align-center mb-20">
+          <div className={styles.cartItem}>
             <img
               className="mr-20"
               width={70}
@@ -33,10 +35,10 @@ function Drawer() {
               <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
               <b>12 999 руб.</b>
             </div>
-            <img className="removeBtn" src="img/del-point.svg" alt="del" />
+            <img className={styles.removeBtn} src="img/del-point.svg" alt="del" />
           </div>
         </div>
-        <div className="cartTotalBlock">
+        <div className={styles.cartTotalBlock}>
           <ul>
             <li>
               <span>Итого:</span>
@@ -49,7 +51,7 @@ function Drawer() {
               <b>1074 руб.</b>
             </li>
           </ul>
-          <button className="greenButton">
+          <button className={styles.greenButton}>
             Оформить заказ <img src="img/arrow-right.svg" alt="arrow" />
           </button>
         </div>
