@@ -14,7 +14,7 @@ function Drawer(props) {
               className="mr-20"
               width={70}
               height={70}
-              src="/img/sneakers/2.jpg"
+              src="/img/sneakers/02.jpg"
               alt="cover"
             />
             <div className="mr-20">
@@ -28,7 +28,7 @@ function Drawer(props) {
               className="mr-20"
               width={70}
               height={70}
-              src="/img/sneakers/1.jpg"
+              src="/img/sneakers/01.jpg"
               alt="cover"
             />
             <div className="mr-20">
