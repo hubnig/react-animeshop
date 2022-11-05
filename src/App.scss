@@ -16,14 +16,20 @@ body {
 .search-block {
   border: 1px solid #f3f3f3;
   border-radius: 8px;
-  width: 250px;
+  position: relative;
+
   img {
     padding-left: 5px;
   }
+
   input {
     border: 0px;
-    padding: 12px;
+    padding: 12px 5px;
     font-size: 16px;
-    padding-left: 5px;
+  }
+  .del{
+    position: absolute;
+    right: 0;
+    top: 6px;
   }
 }
