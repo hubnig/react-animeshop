@@ -1,6 +1,7 @@
 import './App.scss'
 import React from 'react'
 import axios from 'axios'
+import { Route, Routes } from 'react-router-dom'
 import Card from './components/Card'
 import Header from './components/Header'
 import Drawer from './components/Drawer'
@@ -47,6 +48,9 @@ function App() {
         <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onRemoveCartItem} />
       )}
       <Header onClickCart={() => setCartOpened(true)} />
+      <Routes>
+        <Route path='/favorites' >Это всё хуйня</Route> 
+        </Routes>
       <div className="content p-40">
         <div className="d-flex align-center justify-between mb-40">
           <h1>
