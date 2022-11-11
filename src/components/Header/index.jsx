@@ -27,7 +27,7 @@ function Header(props) {
           <span>1205 руб.</span>
         </li>
         <li className="mr-15 d-flex align-center cu-p">
-          <Link to="/favorites">
+          <Link to="/favorites" style={{width: '21px', height: '19px'}}>
             <svg
               width="21"
               height="19"
@@ -42,6 +42,7 @@ function Header(props) {
             </svg>
           </Link>
         </li>
+  
         <li className="d-flex align-center cu-p">
           <svg //Делаем так если нужно будет изменить цвет svg
             width="20"
@@ -58,6 +59,7 @@ function Header(props) {
             />
           </svg>
         </li>
+
       </ul>
     </header>
   )
