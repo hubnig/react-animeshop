@@ -3,13 +3,13 @@ import styles from './Header.module.scss'
 
 function Header(props) {
   return (
-    <header className="d-flex justify-between align-center p-40">
+    <header className="d-flex justify-between align-center">
       <Link to="/">
         <div className="d-flex align-center">
-          <img width={40} height={40} src="img/logo.png" alt="logo" />
+          <img width={60} height={60} src="img/logo.png" alt="logo" />
           <div className={styles.headerInfo}>
-            <h3 className="text-uppercase">React Sneakers</h3>
-            <p className="opacity-5">Магазин лучших кроссовок</p>
+            <h3 className="text-uppercase">Да, сэмпай!</h3>
+            <p className="opacity-5">Лучший аниме магазин</p>
           </div>
         </div>
       </Link>

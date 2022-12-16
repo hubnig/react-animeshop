@@ -19,7 +19,7 @@ function Card({id, name, price, imageUrl, onClickPlus, onClickFavorite, favorite
       <div className={styles.favorite} onClick={isLike}>
         <img src={isFavorite ? "/img/heart-liked.svg" : "/img/heart-unliked.svg"} alt="like" />
       </div>
-      <img width={133} height={112} src={imageUrl} alt="cover" />
+      <img width={171} height={150} src={imageUrl} alt="cover" />
       <h5>{name}</h5>
       <div className="d-flex justify-between">
         <div className="d-flex flex-column">

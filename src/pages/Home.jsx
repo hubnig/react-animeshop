@@ -10,9 +10,10 @@ function Home({
 }) {
   return (
     <div className="content p-40">
+      <div className=''><img width={1000}  src="./img/baner2.jpg" alt="baner" /></div>
       <div className="d-flex align-center justify-between mb-40">
         <h1>
-          {searchValue ? `Поиск по запросу: ${searchValue}` : 'Все кроссовки'}
+          {searchValue ? `Поиск по запросу: ${searchValue}` : 'Все товары'}
         </h1>
         <div className="search-block d-flex">
           <img src="/img/search.svg" alt="search" />

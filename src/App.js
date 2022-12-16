@@ -41,21 +41,21 @@ function App() {
   }
 
   const addToFavorite = async (obj) => {
-   try {
-    if (favorites.find((favObj) => favObj.id === obj.id)) {
-      axios.delete(
-        `https://636524e2f711cb49d1f662c6.mockapi.io/favorites/${obj.id}`
-      )
-    } else {
-      const { data } = await axios.post(
-        'https://636524e2f711cb49d1f662c6.mockapi.io/favorites',
-        obj
-      ) //.then(res => setCartItems(prev => [...prev, res.data]))
-      setFavorites((prev) => [...prev, data])
+    try {
+      if (favorites.find((favObj) => favObj.id === obj.id)) {
+        axios.delete(
+          `https://636524e2f711cb49d1f662c6.mockapi.io/favorites/${obj.id}`
+        )
+      } else {
+        const { data } = await axios.post(
+          'https://636524e2f711cb49d1f662c6.mockapi.io/favorites',
+          obj
+        ) //.then(res => setCartItems(prev => [...prev, res.data]))
+        setFavorites((prev) => [...prev, data])
+      }
+    } catch (error) {
+      alert('Не удалось добавить в избраное')
     }
-   } catch (error) {
-    alert('Не удалось добавить в избраное')
-   }
   }
 
   const onChangeSearchInput = (event) => {
@@ -68,36 +68,39 @@ function App() {
   }
 
   return (
-    <div className="wrapper clear">
-      {cartOpened && (
-        <Drawer
-          items={cartItems}
-          onClose={() => setCartOpened(false)}
-          onRemove={onRemoveCartItem}
-        />
-      )}
-      <Header onClickCart={() => setCartOpened(true)} />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              items={items}
-              searchValue={searchValue}
-              setSearchValue={setSearchValue}
-              onChangeSearchInput={onChangeSearchInput}
-              addToFavorite={addToFavorite}
-              addToCart={addToCart}
-            />
-          }
-        ></Route>
-        <Route
-          path="/favorites"
-          element={
-            <Favorites items={favorites} addToFavorite={addToFavorite} />
-          }
-        />
-      </Routes>
+    <div className="main">
+      <video src="img/videoBackground.mp4" autoPlay loop muted />
+      <div className="wrapper clear">
+        {cartOpened && (
+          <Drawer
+            items={cartItems}
+            onClose={() => setCartOpened(false)}
+            onRemove={onRemoveCartItem}
+          />
+        )}
+        <Header onClickCart={() => setCartOpened(true)} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                items={items}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+                onChangeSearchInput={onChangeSearchInput}
+                addToFavorite={addToFavorite}
+                addToCart={addToCart}
+              />
+            }
+          ></Route>
+          <Route
+            path="/favorites"
+            element={
+              <Favorites items={favorites} addToFavorite={addToFavorite} />
+            }
+          />
+        </Routes>
+      </div>
     </div>
   )
 }

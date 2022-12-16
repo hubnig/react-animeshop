@@ -4,18 +4,17 @@ function Drawer({ onClose, items = [], onRemove }) {
   return (
     <div className={styles.overlay}>
       <div className={styles.drawer}>
-        <h2 className="d-flex justify-between align-center mb-30">
-          Корзина
-          <img
-            onClick={onClose}
-            className="cu-p"
-            src="img/del-point.svg"
-            alt="del"
-          />
-        </h2>
-
         {items.length > 0 ? (
-          <div>
+          <>
+            <h2 className="d-flex justify-between align-center mb-30">
+              Корзина
+              <img
+                onClick={onClose}
+                className="cu-p"
+                src="img/del-point.svg"
+                alt="del"
+              />
+            </h2>
             <div className={styles.items}>
               {items.map((obj) => (
                 <div className={styles.cartItem}>
@@ -26,7 +25,7 @@ function Drawer({ onClose, items = [], onRemove }) {
                     src={obj.imageUrl}
                     alt="cover"
                   />
-                  <div className="mr-20">
+                  <div className="mr-20 flex">
                     <p className="mb-5">{obj.name}</p>
                     <b>{obj.price} руб.</b>
                   </div>
@@ -46,18 +45,23 @@ function Drawer({ onClose, items = [], onRemove }) {
                   <div></div>
                   <b>21 498 руб.</b>
                 </li>
-                <li>
-                  <span>Налог 5%:</span>
-                  <div></div>
-                  <b>1074 руб.</b>
-                </li>
               </ul>
               <button className={styles.greenButton}>
                 Оформить заказ <img src="img/arrow-right.svg" alt="arrow" />
               </button>
             </div>
-          </div>
+          </>
         ) : (
+          <>
+          <h2 className="d-flex justify-between align-center mb-30">
+              Корзина
+              <img
+                onClick={onClose}
+                className="cu-p"
+                src="img/del-point.svg"
+                alt="del"
+              />
+            </h2>
           <div className={styles.cartEmpty}>
             <img width={120} src="/img/cart-empty.png" alt="empty" />
             <h2>Корзина пуста</h2>
@@ -66,7 +70,7 @@ function Drawer({ onClose, items = [], onRemove }) {
               <img src="/img/arrow-left.png" alt="arrow" />
               Вернуться назад
             </button>
-          </div>
+          </div></>
         )}
       </div>
     </div>
