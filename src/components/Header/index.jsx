@@ -21,7 +21,7 @@ function Header(props) {
           <img
             width={18}
             height={18}
-            src="./img/cart.svg"
+            src="/img/cart.svg"
             alt="cart" //Делаем так ели не нужно ничего менять картинка потом закешируется и убдет подргружаться побыстреее
           />
           <span>1205 руб.</span>
