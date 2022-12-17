@@ -69,7 +69,7 @@ function App() {
 
   return (
     <div className="main">
-      <video src="img/videoBackground.mp4" autoPlay loop muted />
+      <video src="img/videoBackground.mp4" poster="img.coverBackground.png" autoPlay loop muted />
       <div className="wrapper clear">
         {cartOpened && (
           <Drawer
