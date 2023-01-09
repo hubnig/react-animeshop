@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Drawer from './components/Drawer'
 import Home from './pages/Home'
 import Favorites from './pages/Favorites'
+import Account from './pages/Account'
 
 function App() {
   const [items, setItems] = React.useState([])
@@ -69,7 +70,13 @@ function App() {
 
   return (
     <div className="main">
-      <video src="img/videoBackground.mp4" poster="img/coverBackground.png" autoPlay loop muted />
+      <video
+        src="img/videoBackground.mp4"
+        poster="img/coverBackground.png"
+        autoPlay
+        loop
+        muted
+      />
       <div className="wrapper clear">
         {cartOpened && (
           <Drawer
@@ -92,11 +99,17 @@ function App() {
                 addToCart={addToCart}
               />
             }
-          ></Route>
+          />
           <Route
             path="/favorites"
             element={
               <Favorites items={favorites} addToFavorite={addToFavorite} />
+            }
+          />
+                    <Route
+            path="/account"
+            element={
+              <Account />
             }
           />
         </Routes>
@@ -106,4 +119,3 @@ function App() {
 }
 
 export default App
-

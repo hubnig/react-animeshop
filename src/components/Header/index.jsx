@@ -24,10 +24,10 @@ function Header(props) {
             src="/img/cart.svg"
             alt="cart" //Делаем так ели не нужно ничего менять картинка потом закешируется и убдет подргружаться побыстреее
           />
-          <span>1205 руб.</span>
+          <span>13 990 руб.</span>
         </li>
         <li className="mr-15 d-flex align-center cu-p">
-          <Link to="/favorites" style={{width: '21px', height: '19px'}}>
+          <Link className={styles.link} to="/favorites">
             <svg
               width="21"
               height="19"
@@ -44,6 +44,7 @@ function Header(props) {
         </li>
   
         <li className="d-flex align-center cu-p">
+        <Link className={styles.link} to="/account">
           <svg //Делаем так если нужно будет изменить цвет svg
             width="20"
             height="20"
@@ -58,6 +59,7 @@ function Header(props) {
               fill="#9B9B9B"
             />
           </svg>
+          </Link>
         </li>
 
       </ul>
