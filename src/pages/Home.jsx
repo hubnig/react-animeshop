@@ -1,3 +1,4 @@
+import '../App.scss'
 import Card from '../components/Card/index'
 
 function Home({
@@ -10,7 +11,7 @@ function Home({
 }) {
   return (
     <div className="content p-40">
-      <div className=''><img width={1000}  src="./img/baner2.jpg" alt="baner" /></div>
+      <div className='img'><img   src="./img/baner2.jpg" alt="baner" /></div>
       <div className="d-flex align-center justify-between mb-40">
         <h1>
           {searchValue ? `Поиск по запросу: ${searchValue}` : 'Все товары'}
