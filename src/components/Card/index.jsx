@@ -13,7 +13,7 @@ function Card({id, name, price, imageUrl, onClickPlus, onClickFavorite, favorite
     onClickFavorite({id, name, price, imageUrl});
     setIsFavorite(!isFavorite);
   }
-
+  console.log(imageUrl)
   return (
     <div className={styles.card}>
       <div className={styles.favorite} onClick={isLike}>
